@@ -24,7 +24,7 @@ func main() {
 	myting := strings.Split(os.Args[1], "\\n")   // seperates the argument by '\n'
 
 	for word := 0; word < len(myting); word++ {
-		fmt.Println(len(myting[word]))
+		
 		if word == 0 && len(myting) >= 3 {
 			if len(myting[0]) == 0 && len(myting[1]) == 0 && len(myting[2]) == 0 {
 				word += 1
