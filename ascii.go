@@ -19,12 +19,13 @@ func main() {
 		log.Fatal("ting messup")
 	}
 	//(asciinum-32)*9+1
-
-	split := strings.Split(string(banner), "\n") // seperates file by new lines
-	myting := strings.Split(os.Args[1], "\\n")   // seperates the argument by '\n'
+	ss := string(banner)
+	ss = strings.ReplaceAll(ss, "\r", "")
+	split := strings.Split(ss, "\n")           // seperates file by new lines
+	myting := strings.Split(os.Args[1], "\\n") // seperates the argument by '\n'
 
 	for word := 0; word < len(myting); word++ {
-		
+
 		if word == 0 && len(myting) >= 3 {
 			if len(myting[0]) == 0 && len(myting[1]) == 0 && len(myting[2]) == 0 {
 				word += 1
